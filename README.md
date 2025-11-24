@@ -2,10 +2,10 @@
 Repositorio de demostración que muestra la arquitectura y estructura del backend y frontend del e-commerce KeyLab, incluyendo tecnologías utilizadas y flujo general de la aplicación.
 Es un proyecto de e-commerce fullstack que demuestra buenas prácticas de arquitectura y estructura de código profesional, mostrando cómo se organiza un backend con Spring Boot y un frontend moderno en React.
 
-## Tecnologías
-- **Backend:** Java, Spring Boot, Spring Security, JPA Hibernate, MySQL
-- **Frontend:** React, Tailwind, Vite
-- **Otros:** JWT, Docker, Render, Supabase, Cloudinary, Mercado Pago.
+## Decisiones de Arquitectura:
+- **Spring Boot & Java::** Elegido por su robustez en el manejo de concurrencia y tipado estático, crítico para el manejo financiero del e-commerce.
+- **Arquitectura Hexagonal (Ports & Adapters):** Implementada para desacoplar la lógica de negocio (Dominio) de los frameworks externos, permitiendo cambiar la base de datos o pasarelas de pago sin reescribir el núcleo.
+- **Docker:** Utilizado para garantizar la paridad entre el entorno de desarrollo y producción (Vercel/Oracle).
 
 ## Arquitectura del proyecto
 
