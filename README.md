@@ -1,10 +1,10 @@
 # DEMO KeylabTech.com.ar
-Repositorio de demostración que muestra la arquitectura y estructura del backend y frontend del e-commerce KeyLab, incluyendo tecnologías utilizadas y flujo general de la aplicación.
+Repositorio version DEMO que muestra la arquitectura y estructura del backend y frontend del e-commerce KeyLab, incluyendo tecnologías utilizadas y flujo general de la aplicación.
 Es un proyecto de e-commerce fullstack que demuestra buenas prácticas de arquitectura y estructura de código profesional, mostrando cómo se organiza un backend con Spring Boot y un frontend moderno en React.
 
 ## Decisiones de Arquitectura:
 - **Spring Boot & Java:** Elegido por su robustez en el manejo de concurrencia y tipado estático, crítico para el manejo financiero del e-commerce.
-- **Arquitectura Hexagonal (Ports & Adapters):** Implementada para desacoplar la lógica de negocio (Dominio) de los frameworks externos, permitiendo cambiar la base de datos o pasarelas de pago sin reescribir el núcleo.
+- **Arquitectura MVC:** Patrón de diseño que divide la aplicación en Modelo, Vista y Controlador para separar la lógica de presentación de la lógica de negocio. Esto permite organizar mejor el código, mantener interfaces limpias y facilitar la evolución del frontend sin afectar el funcionamiento interno del sistema.
 - **Docker:** Utilizado para garantizar la paridad entre el entorno de desarrollo y producción (Vercel/Oracle).
 
 ## Arquitectura del proyecto
@@ -53,7 +53,7 @@ KeyLabTech es un e-commerce fullstack con arquitectura moderna, donde el **front
 3. El backend valida usuarios con JWT y maneja la seguridad de cada endpoint según el rol (usuario, cliente, admin).
 4. El backend y frontend están desplegados en la nube:
    - **Frontend:** Vercel
-   - **Backend:** Render / Oracle / Supabase
+   - **Backend:** Oracle / Supabase
 5. Se consumen APIs externas para funcionalidades clave:
    - **Pagos:** Mercado Pago, PayPal
    - **Almacenamiento de archivos e imágenes:** Cloudinary
